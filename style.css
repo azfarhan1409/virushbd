@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #f7b42c, #fc575e);
+    font-family: 'Arial', sans-serif;
+}
+
+.birthday-container {
+    text-align: center;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.birthday-text {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Styling Kue Ulang Tahun */
+.cake {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.plate {
+    width: 300px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -30px;
+}
+
+.layer {
+    width: 250px;
+    height: 70px;
+    background-color: #ff7f50;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.layer1 {
+    background-color: #ff5e5e;
+}
+
+.layer2 {
+    background-color: #ff7f50;
+}
+
+.layer3 {
+    background-color: #ffad60;
+}
+
+.candles {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.candle {
+    width: 15px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+}
+
+.flame {
+    width: 15px;
+    height: 15px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flicker 0.3s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    100% {
+        transform: translateX(-50%) scale(1.2);
+    }
+}
+
+/* Styling Bunga */
+.flower {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+    animation: spin 4s infinite linear;
+}
+
+.flower::before, .flower::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.flower::before {
+    top: -50px;
+    left: 0;
+}
+
+.flower::after {
+    top: 50px;
+    left: 0;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
